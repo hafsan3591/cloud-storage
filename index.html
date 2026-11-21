@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b17"><title>HAFSAN Cloud Storage</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"></div><main class="app">
+<header class="top"><div class="brand"><div class="mark">HC</div><div><strong>HAFSAN CLOUD STORAGE</strong><small>PRIVATE FILE SPACE</small></div></div><button id="signout" class="ghost hidden">Sign out ↗</button></header>
+<section id="setup" class="panel setup hidden">
+<div class="eyebrow">FIRST-TIME SETUP</div><h1>Connect your private storage.</h1><p>Enter your Supabase project details. These are stored only in this browser.</p>
+<label>Supabase Project URL<input id="supabaseUrl" placeholder="https://xxxx.supabase.co"></label>
+<label>Supabase anon / publishable key<textarea id="supabaseKey" rows="3" placeholder="Paste your public anon key"></textarea></label>
+<button id="saveConfig" class="primary">Connect storage</button><button id="resetConfig" class="ghost">Clear settings</button>
+<p class="hint">Never paste a service-role key here. Use only the public anon/publishable key.</p>
+</section>
+<section id="auth" class="panel auth hidden"><div class="eyebrow">SECURE ACCESS</div><h1>Your files.<br><span>Your private space.</span></h1><p>Sign in to access your personal cloud.</p>
+<label>Email<input id="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+<label>Password<input id="password" type="password" autocomplete="current-password" placeholder="Password"></label>
+<div class="actions"><button id="login" class="primary">Sign in</button><button id="signup" class="secondary">Create account</button></div><div id="authMsg" class="message"></div><button id="changeConfig" class="link">Storage settings</button>
+</section>
+<section id="dashboard" class="hidden">
+<div class="hero"><div><div class="eyebrow">YOUR FILES · YOUR SPACE</div><h1>Everything you need.<br><span>All in one cloud.</span></h1><p>Upload, download and manage your private files.</p></div><div class="orb">HC<br><small>PRIVATE</small></div></div>
+<div class="stats"><article class="panel"><small>Files in your space</small><strong id="fileCount">0</strong><span>Private to your account</span></article><article class="panel"><small>Storage provider</small><strong>Supabase</strong><span>Private bucket storage</span></article></div>
+<section class="panel upload"><div class="uploadTitle"><div class="uploadIcon">↑</div><div><h2>Upload files</h2><p>Choose multiple files from your device.</p></div></div><input id="fileInput" type="file" multiple><button id="uploadBtn" class="primary full">Upload selected files ↑</button><div id="uploadMsg" class="message"></div></section>
+<section class="panel library"><div class="libHead"><div><div class="eyebrow">LIBRARY</div><h2>Your files</h2></div><button id="refresh" class="ghost">↻ Refresh</button></div><input id="search" class="search" placeholder="Search files…"><div id="fileList" class="fileList"></div><div id="empty" class="empty hidden">No files yet. Upload something to start your private library.</div></section>
+</section>
+<footer>HAFSAN CLOUD STORAGE <span>PRIVATE · PERSONAL</span></footer>
+</main><script src="app.js"></script></body></html>
